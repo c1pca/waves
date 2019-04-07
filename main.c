@@ -137,7 +137,7 @@ int main() {
 
         glLineWidth(3.0);
 
-        glDrawArrays(GL_LINE_STRIP, 0, vbo.s);
+        glDrawArrays(GL_LINE_STRIP, 0, 2000);
         SDL_GL_SwapWindow(sdl_window);
     } while (running);
 

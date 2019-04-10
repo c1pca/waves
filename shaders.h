@@ -5,7 +5,7 @@
 #ifndef ECG_SHADERS_H
 #define ECG_SHADERS_H
 
-#include <OpenGL/gl.h>
+#include <OpenGL/gl3.h>
 
 GLuint create_shaders();
 

@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ytkachyshyn/CLionProjects/ECG/defs.h
+OpenGL/gl3.h
+-
+
+/Users/ytkachyshyn/CLionProjects/ECG/shaders.c
+stdlib.h
+-
+OpenGL/gl3.h
+-
+defs.h
+/Users/ytkachyshyn/CLionProjects/ECG/defs.h
+shaders.h
+/Users/ytkachyshyn/CLionProjects/ECG/shaders.h
+
+/Users/ytkachyshyn/CLionProjects/ECG/shaders.h
+OpenGL/gl3.h
+-
+

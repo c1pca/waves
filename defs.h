@@ -4,7 +4,7 @@
 
 #ifndef ECG_DEFS_H
 #define ECG_DEFS_H
-#include <OpenGL/gl.h>
+#include <OpenGL/gl3.h>
 
 typedef int bool;
 #define true 1

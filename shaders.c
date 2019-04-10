@@ -3,24 +3,27 @@
 //
 //MAC
 #include <stdlib.h>
-#include <OpenGL/gl.h>
+#include <OpenGL/gl3.h>
 #include "defs.h"
 #include "shaders.h"
 
 GLuint create_shaders(){
     //create shader
     const char * shader_vert_src =
-            "attribute vec2 vertex2d;\n"
+            "#version 330 core\n"
+            "in vec2 vertex2d;\n"
             "void main() {\n"
             "	gl_Position = vec4(vertex2d.x, vertex2d.y, 0, 1);\n"
             "}\n";
 
     const char *shader_frag_src =
+            "#version 330 core\n"
             "#ifdef GL_ES\n"
             "precision mediump float;\n"
             "#endif\n"
+            "out vec4 outputColor;\n"
             "void main() {\n"
-            "	gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n"
+            "	outputColor = vec4(1.0, 1.0, 1.0, 1.0);\n"
             "}\n";
 
     GLint is_compiled;

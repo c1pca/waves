@@ -3,8 +3,7 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
-#include <SDL2/SDL.h>
-#include <OpenGL/gl.h>
+#include <OpenGL/gl3.h>
 #include "init.h"
 #include "defs.h"
 
@@ -28,6 +27,10 @@ SDL_Window *init(){
     }
     else
     {
+        SDL_Init(SDL_INIT_EVERYTHING);
+        SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+        SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
+        SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 #ifdef USE_OPENGLES
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
